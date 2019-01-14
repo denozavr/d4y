@@ -1,0 +1,52 @@
+/*box-sizing*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//other site wide changes
+html, body {
+  font-family: $font-family-default;
+  height: 100%;
+}
+
+body {
+  background: $bg-color;
+  color: $color-text-default;
+}
+
+//links
+a {
+  text-decoration: none;
+}
+
+//hide default select arrow
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.block {
+  display: block;
+}
+
+//responsive images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+//accessability
+.visually-hidden { 
+  clip: rect(1px, 1px, 1px, 1px); 
+  height: 1px; 
+  overflow: hidden; 
+  position: absolute; 
+  white-space: nowrap; 
+  width: 1px; 
+}
