@@ -40,3 +40,25 @@
     line-height: 38px;
   }
 }
+
+@media(max-width: 750px) {
+
+  .slider-content {
+    .item {
+      max-width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 23px;
+    }
+  }
+
+}
