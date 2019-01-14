@@ -20,29 +20,28 @@
   align-items: center;
   flex-wrap: wrap;
   min-height: 56px;
-  margin: 0;
   padding: 0 6%;
-
   list-style: none;
 }
 
 .site-navigation-item {
   width: 22%;
+
+  a {
+    color: $navigation-link-color;
+  }
+
+  &:nth-child(-n+2) {
+    text-align: left;
+  }
+
+  &:nth-child(n+3) {
+    text-align: right;
+  }
+
+  &:nth-child(2) {
+    margin-right: 9.5%;
+  }
+
 }
 
-.site-navigation-item:nth-child(-n+2) {
-  text-align: left;
-}
-
-.site-navigation-item:nth-child(n+3) {
-  text-align: right;
-}
-
-.site-navigation-item:nth-child(2) {
-  margin-right: 9.5%;
-}
-
-
-.site-navigation-item a {
-  color: #000000;
-}
