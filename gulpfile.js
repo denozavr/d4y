@@ -34,8 +34,8 @@ function style() {
     .pipe(postcss([ autoprefixer({browsers: ['last 2 versions']}) ]))
     // Now add/write the sourcemaps
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.styles.destDev))
-    .pipe(browserSync.stream());
+    .pipe(gulp.dest(paths.styles.destDev));
+    // .pipe(browserSync.stream());
 }
 
 function styleMin() {
@@ -59,6 +59,7 @@ function watch() {
 
   browserSync.init({
     // You can tell browserSync to use this directory and serve it as a mini-server
+    files: [ './styles/**.*','./*.html' ],
     server: {
         baseDir: "./"
     }
@@ -73,7 +74,7 @@ function watch() {
   gulp.watch(paths.styles.src, style);
   gulp.watch(paths.styles.finalFile, styleMin);
 
-  gulp.watch("./*.html", reload);
+  // gulp.watch("./*.html", reload);
 }
 
 // Don't forget to expose the task!
