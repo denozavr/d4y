@@ -8,7 +8,7 @@
   margin: 70px 0;
 }
 
-.advantages-item > * {
+.advantages-item>* {
   position: relative;
   z-index: 100;
 }
@@ -19,8 +19,8 @@
   position: relative;
   padding: 60px 20px 20px;
 
-  background-color: $advantages-color;//#3a7bd5;
-  color:  $color-white;
+  background-color: $advantages-color; //#3a7bd5;
+  color: $color-white;
 
   &::after {
     content: ""; // ::before and ::after both require content
@@ -35,9 +35,11 @@
   &:nth-child(1)::after {
     background-color: rgba(0, 0, 0, 0.5);
   }
+
   &:nth-child(2)::after {
     background-color: rgba(0, 0, 0, 0.35);
   }
+
   &:nth-child(3)::after {
     background-color: rgba(0, 0, 0, 0.2);
   }
@@ -58,15 +60,15 @@
     z-index: 100;
   }
 
-  &:nth-child(1)::before { 
+  &:nth-child(1)::before {
     background-image: url(../img/svg/advantage-1.svg);
   }
-  
-  &:nth-child(2)::before { 
+
+  &:nth-child(2)::before {
     background-image: url(../img/svg/advantage-2.svg);
   }
-  
-  &:nth-child(3)::before { 
+
+  &:nth-child(3)::before {
     background-image: url(../img/svg/advantage-3.svg);
   }
 

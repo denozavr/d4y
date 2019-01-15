@@ -3,12 +3,15 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 //other site wide changes
-html, body {
+html,
+body {
   font-family: $font-family-default;
   height: 100%;
 }
@@ -42,13 +45,13 @@ img {
 }
 
 //accessability
-.visually-hidden { 
-  clip: rect(1px, 1px, 1px, 1px); 
-  height: 1px; 
-  overflow: hidden; 
-  position: absolute; 
-  white-space: nowrap; 
-  width: 1px; 
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 ul {
