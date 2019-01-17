@@ -8,8 +8,8 @@
 *.sublime*
 node_modules/
 npm-debug.*
-Thumbs.db 
-
+Thumbs.db
+temp/
 
 ### VisualStudioCode ###
 .vscode/*
