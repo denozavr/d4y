@@ -11,6 +11,7 @@
   .footer-social,
   .footer-copyright {
     min-height: 125px;
+    max-width: 340px;
   }
 
   .footer-social {
@@ -18,7 +19,9 @@
     min-width: 300px;
 
     .logo-icons {
+      min-width: 170px;
       padding-right: 15px;
+      padding-left: 25px;
     }
   }
 
@@ -42,8 +45,8 @@
   }
 
   .footer-contact {
+    min-width: 170px;
     border-left: 1px solid $hero-overlay-color;
-    margin-right: 20px;
 
     .contact-data {
       position: relative;
@@ -99,8 +102,7 @@
     /// or make .main-footer justify = center
     /// and .footer-copyright min-width = 368px to align border
     .creator {
-      max-width: 198.5px;
-      padding-right: 15%;
+       padding-right: 15%;
     }
   }
 }
