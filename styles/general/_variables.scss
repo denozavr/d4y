@@ -1,11 +1,12 @@
 //colors
 $color-white: #ffffff;
+$color-black: #000000;
 $color-text-default: #333333;
 $bg-color: #f2f2f2;
 
 $footer-bg-color: #dcdcdc;
 
-$navigation-link-color: #000000;
+$navigation-link-color: $color-black;
 $hero-overlay-color: rgba(45, 51, 69, 0.8);
 $advantages-color: #0095fb;
 
