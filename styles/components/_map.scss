@@ -1,0 +1,63 @@
+.about-with-map{
+  position: relative;
+}
+
+.location-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+
+ .interactive-map {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  height: 430px;
+  border: none;
+}
+
+.about-us {
+  position: absolute;
+  top: 62px;
+  left: 27px;
+  width: 302px;
+  z-index: 3;
+  height: 305px;
+  padding: 15px 20px 15px;
+  background-color: $color-white;
+  border-radius: 35px;
+
+
+  h3 {
+    font-size: 25px;
+    color: darken($logo-color-light-blue, 30%);
+    margin: 15px 0;
+  }
+
+}
+
+.about-text {
+  position: relative;
+  padding-left: 15px;
+  color: $logo-color-blue;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: $logo-color-light-blue;
+  }
+
+}
+
