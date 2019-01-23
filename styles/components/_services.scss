@@ -49,6 +49,22 @@
     background-image: url(../img/svg/service-1.svg);
   }
 
+  &:nth-child(2)::before {
+    background-image: url(../img/svg/consulting.svg);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../img/svg/software.svg);
+  }
+
+  &:nth-child(4)::before {
+    background-image: url(../img/svg/app-dev.svg);
+  }
+
+  &:nth-child(5)::before {
+    background-image: url(../img/svg/cloud.svg);
+  }
+
 }
 
 
