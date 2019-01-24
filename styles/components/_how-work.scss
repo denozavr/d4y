@@ -76,9 +76,23 @@
     width: 70px;
     height: 70px;
     z-index: 11;
-    background: url(../img/svg/work-1.svg);
   }
 
+  &:nth-child(1)::before {
+    background-image: url(../img/svg/work-1.svg);
+  }
+
+  &:nth-child(2)::before {
+    background-image: url(../img/svg/work-2.svg);
+  }
+
+  &:nth-child(3)::before {
+    background-image: url(../img/svg/work-3.svg);
+  }
+
+  &:nth-child(4)::before {
+    background-image: url(../img/svg/work-4.svg);
+  }
 
 }
 
