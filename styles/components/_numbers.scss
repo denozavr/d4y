@@ -1,0 +1,56 @@
+.numbers {
+  background-image: url(../img/services-bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  text-align: center;
+  padding: 60px 8% 40px;
+
+  .numbers-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.number-item {
+  flex-basis: 30%;
+  color: $color-white;
+
+  .number-data  {
+    font-size: 35px;
+    span {
+      display: inline-block;
+      padding-right: 2px;
+      font-size: 45px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+}
+
+
+@media(max-width: 800px) {
+  .numbers {
+    .numbers-list {
+      justify-content: space-around;
+    }
+  }
+
+  .number-item {
+    flex-basis: 33%;
+  }
+}
+
+@media(max-width: 600px) {
+  .number-item {
+    flex-basis: 45%;
+  }
+}
