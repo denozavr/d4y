@@ -1,6 +1,17 @@
 var element = document.querySelector('.numbers');
 var isNumberFired = false;
 
+var qualityElement = element.querySelector('#quality');
+var yearsElement = element.querySelector('#years');
+var projectsElement = element.querySelector('#projects');
+
+function makeNumbersZeroes() {
+  qualityElement.textContent = '0';
+  yearsElement.textContent = '0';
+  projectsElement.textContent = '0';
+}
+makeNumbersZeroes();
+
 function myFunction() {
   animateValue("quality", 0, 100, 4000);
   animateValue("years", 0, 5, 4000);

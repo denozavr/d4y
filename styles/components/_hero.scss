@@ -14,8 +14,8 @@
 
 .slider-content {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 55px; // take into account the height of fixed header
+  left: 0; // take into account the height of fixed header
   bottom: 0px;
   width: 100%;
   display: flex;
