@@ -1,5 +1,10 @@
 .main-header {
   position: relative;
+  // min-height: 56px;
+}
+
+.main-header.full-width {
+  background: $color-white;
 }
 
 .main-header-logo {
@@ -50,4 +55,14 @@
   position: fixed;
   z-index: 999;
   background: $color-white;
+}
+
+.main-header-absolute {
+  top: 0;
+  position: absolute;
+  z-index: 11;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
 }
