@@ -1,6 +1,15 @@
-.slider {
+.slider:not(.slider-terms) {
   position: relative;
   padding-top: 55px; // height of fixed header with navigation
+}
+
+.slider-terms {
+  position: relative;
+  &::after{
+    content: "";
+    z-index: 1;
+    @extend .slider-overlay;
+  }
 }
 
 .slider-overlay {
@@ -10,6 +19,12 @@
   bottom: 0px;
   width: 100%;
   background-color: $hero-overlay-color;
+}
+
+.terms-img {
+  width: 100%;
+
+
 }
 
 .slider-content {
@@ -22,7 +37,7 @@
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  /* z-index: 300; */
+  z-index: 10;
   /* text-align: center; */
 
   .item {
@@ -31,7 +46,8 @@
   }
 
   h2 {
-    font-size: 2.9em;
+    margin: 15px 0;
+    font-size: 44px;
     line-height: 38px;
     font-weight: 700;
   }
@@ -39,10 +55,43 @@
   p {
     font-size: 1.9em;
     line-height: 38px;
+    margin: 0;
   }
 }
 
-@media(max-width: 750px) {
+.slider-terms{
+  min-height: 400px;
+  background-image: url(../img/terms-cut.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+}
+
+
+
+@media(max-width: 900px) {
+
+  .slider-content {
+    .item {
+      max-width: 80%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 28px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+
+}
+
+@media(max-width: 550px) {
 
   .slider-content {
     .item {
