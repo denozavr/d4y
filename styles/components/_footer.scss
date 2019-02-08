@@ -1,6 +1,7 @@
 
 .full-width-footer {
   background-color: $footer-bg-color;
+  background-image: url('../img/bg-footer-dark.png');
 }
 
 .main-footer {
@@ -11,6 +12,8 @@
   flex-wrap: wrap;
   padding: 30px 2%;
   background-color: $footer-bg-color;
+  background-image: url('../img/bg-footer-dark.png');
+
 
 
   .footer-social,
