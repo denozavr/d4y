@@ -1,0 +1,57 @@
+.contact-us {
+  padding: 5px 6% 50px;
+  text-align: center;
+
+  h2 {
+    font-size: 35px;
+  }
+}
+
+.contact-form {
+  width: 650px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  input,
+  textarea {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    padding-right: 40px;
+
+    font: inherit;
+    color: #000000;
+
+    background-color: white;
+    background-color: rgba(92, 168, 220, .12);
+    border: 2px solid rgba(1, 62, 123, 0.8);
+  }
+
+  .input-half-width {
+    width: 48%;
+  }
+
+  .input-full-widht {
+    width: 100%;
+  }
+
+  .contact-button,
+  .policy-checkbox {
+    width: 34%;
+  }
+
+  .policy-checkbox {
+    position: relative;
+
+    input[type="checkbox"] + .checkbox-indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border: 2px solid #013e7b;
+    }
+  }
+
+}
