@@ -30,7 +30,7 @@
     // background-color: rgba(92, 168, 220, .25);
     background-color: fade-out($logo-color-light-blue, .75);
     border-radius: 15px;
-    border: 2px solid fade-out($logo-color-blue, 1) ;// rgba(1, 62, 123, 0.8);
+    border: 2px solid fade-out($logo-color-blue, 1); // rgba(1, 62, 123, 0.8);
   }
 
   .input-half-width {
@@ -50,28 +50,101 @@
     position: relative;
     padding: 10px 0;
 
-    input[type="checkbox"] + .checkbox-indicator {
+    .policy-checkbox-text {
+      margin-left: 10px;
+    }
+
+    input[type="checkbox"]+.checkbox-indicator {
       position: absolute;
       top: 10px;
       left: 0;
 
-      width: 17px;
-      height: 17px;
+      width: 22px;
+      height: 22px;
       border: 2px solid darken($logo-color-light-blue, 25);
     }
+
+    input[type="checkbox"]:checked+.checkbox-indicator::before,
+    input[type="checkbox"]:checked+.checkbox-indicator::after {
+      content: '';
+
+      position: absolute;
+      top: 8px;
+      left: 0px;
+
+      width: 17px;
+      height: 2px;
+
+      background-color: darken($logo-color-light-blue, 25);
+    }
+
+    input[type="checkbox"]:checked+.checkbox-indicator::before {
+      transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked+.checkbox-indicator::after {
+      transform: rotate(-45deg);
+    }
+
   }
 
   .contact-button {
-      padding: 10px 30px;
+    padding: 10px 30px;
 
-      font: inherit;
-      text-align: center;
-      color: $color-white;
-      vertical-align: middle;
-      text-transform: uppercase;
+    font: inherit;
+    text-align: center;
+    color: $color-white;
+    vertical-align: middle;
+    text-transform: uppercase;
 
-      background-color: darken($logo-color-light-blue, 25); //lighten($logo-color-blue, 15%);
-      border: none;
-      border-radius: 15px;
+    background-color: darken($logo-color-light-blue, 25); //lighten($logo-color-blue, 15%);
+    border: none;
+    border-radius: 15px;
+  }
+
+}
+
+// Mobiles styles
+.contact-form {
+
+  @media screen and (max-width: 750px) {
+    width: 90%;
+
+    .input-half-width {
+      width: 100%;
+    }
+
+    .contact-button,
+    .policy-checkbox {
+      width: 65%;
+      margin: 5px auto;
+    }
+
+    .policy-checkbox {
+      position: relative;
+      padding: 13px 0;
+
+      .policy-checkbox-text {
+        display: block;
+        margin-left: 40px;
+        text-align: left;
+      }
+
+      input[type="checkbox"]+.checkbox-indicator {
+        width: 27px;
+        height: 27px;
+      }
+
+      input[type="checkbox"]:checked + .checkbox-indicator::before,
+      input[type="checkbox"]:checked + .checkbox-indicator::after {
+        top: 10px;
+        left: 2px;
+
+        width: 19px;
+        height: 2px;
+      }
+    }
+
+
   }
 }
