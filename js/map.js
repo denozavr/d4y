@@ -10,7 +10,8 @@ function initMap() {
     zoom: 17,
     center: new google.maps.LatLng(51.2510058, 7.1290000), //  left: 27px;
     //center: new google.maps.LatLng(51.2510058, 7.1323998), // when about us on the right (right: 27px)
-    mapTypeId: 'roadmap'
+    mapTypeId: 'roadmap',
+    fullscreenControl: false
   });
 
   var contentString = '<div id="content" class="map-popup">' +

@@ -8,10 +8,10 @@
   margin: 70px 0;
 }
 
-.advantages-item>* {
-  position: relative;
-  z-index: 100;
-}
+  // .advantages-item > * {
+  //   position: relative;
+  //   z-index: 100;
+  // }
 
 // here is main and ::after
 .advantages-item {
@@ -32,17 +32,29 @@
     z-index: 1;
   }
 
-  &:nth-child(1)::after {
-    background-color: rgba(0, 0, 0, 0.5);
+  &:nth-child(1) {
+    background-color: $logo-color-blue;
   }
 
-  &:nth-child(2)::after {
-    background-color: rgba(0, 0, 0, 0.35);
+  &:nth-child(2) {
+    background-color: lighten($logo-color-blue, 8);
   }
 
-  &:nth-child(3)::after {
-    background-color: rgba(0, 0, 0, 0.2);
+  &:nth-child(3) {
+    background-color: lighten($logo-color-blue, 16);
   }
+
+  // &:nth-child(1)::after {
+  //   background-color: rgba(0, 0, 0, 0.5);
+  // }
+
+  // &:nth-child(2)::after {
+  //   background-color: rgba(0, 0, 0, 0.35);
+  // }
+
+  // &:nth-child(3)::after {
+  //   background-color: rgba(0, 0, 0, 0.2);
+  // }
 
 }
 
