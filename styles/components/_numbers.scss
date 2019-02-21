@@ -1,5 +1,6 @@
 .numbers {
-  background-image: url(../img/services-bg.jpg);
+  // !! Loaded backgrounds lazily in HTML via data-bg + JS
+  //background-image: url(../img/services-bg.jpg);
   background-size: cover;
   background-position: top center;
   text-align: center;

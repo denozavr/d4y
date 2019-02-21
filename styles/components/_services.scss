@@ -1,5 +1,6 @@
 .services {
-  background-image: url(../img/services-bg.jpg);
+  // !! Loaded backgrounds lazily in HTML via data-bg + JS
+  // background-image: url(../img/services-bg.jpg);
   text-align: center;
   padding: 50px 8%;
 
