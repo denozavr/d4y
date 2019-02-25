@@ -43,7 +43,7 @@
         <h1 class="visually-hidden">Dev4you hero image</h1>
         <picture class="block">
           <source type="image/webp" srcset="img/main.webp">
-        <img class="block" src="img/main.jpg" width="1300" height="500" alt="Dev4You">
+          <img class="block" src="img/main.jpg" width="1300" height="500" alt="Dev4You">
         </picture>
         <div class="slider-overlay">
         </div>
@@ -134,7 +134,7 @@
                   <li>Microsoft Azure & AWS</li>
                   <li>Microsoft SQL Server</li>
                   <li>MongoDB</li>
-        </ul>
+                </ul>
               </div>
             </section>
             <section class="skill-item">
@@ -144,30 +144,30 @@
               </div>
             </section>
           </div>
-      </section>
+        </section>
 
-      <section class="numbers lazyload" data-bg="img/services-bg.jpg">
-        <h2 class="visually-hidden">Our achievements in numbers</h2>
-        <ul class="numbers-list">
-          <li class="number-item">
-            <div class="number-data"><span id="quality">100</span>%</div>
-            <p>quality</p>
-          </li>
-          <li class="number-item">
-            <div class="number-data"><span id="years">5</span>+</div>
-            <p>years in business</p>
-          </li>
-          <li class="number-item">
-            <div class="number-data"><span id="projects">20</span>+</div>
-            <p>completed projects</p>
-          </li>
+        <section class="numbers lazyload" data-bg="img/services-bg.jpg">
+          <h2 class="visually-hidden">Our achievements in numbers</h2>
+          <ul class="numbers-list">
+            <li class="number-item">
+              <div class="number-data"><span id="quality">100</span>%</div>
+              <p>quality</p>
+            </li>
+            <li class="number-item">
+              <div class="number-data"><span id="years">5</span>+</div>
+              <p>years in business</p>
+            </li>
+            <li class="number-item">
+              <div class="number-data"><span id="projects">20</span>+</div>
+              <p>completed projects</p>
+            </li>
 
-          <!-- <li class="number-item">
-            <div class="number-data" ><span id="value4">0</span>+</div>
-            <p>years</p>
-          </li> -->
-        </ul>
-      </section>
+            <!-- <li class="number-item">
+              <div class="number-data" ><span id="value4">0</span>+</div>
+              <p>years</p>
+            </li> -->
+          </ul>
+        </section>
 
       <section class="how-work">
         <h2>How we work</h2>
@@ -207,7 +207,7 @@
           <!--  Commented this code because was really strange bug with google maps see 19-02-15-GoogleMapsBug.png in bugs (fixed by moving <div class="interactive-map"> </div> outside current div-->
           <picture>
             <source type="image/webp" data-srcset="img/map.webp" >
-          <img class="lazyload" data-src="img/map.jpg" width="1300" height="430" alt="Dev4You location on map">
+            <img class="lazyload" data-src="img/map.jpg" width="1300" height="430" alt="Dev4You location on map">
           </picture>
         </div>
         <div class="interactive-map"> </div>
@@ -320,11 +320,17 @@
   </div>
 
   <script src="js/lazysizes.min.js" async></script>
-
-  <script src="js/map.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/numbers.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqItA_68DVvPnpN-pyXcb_F3Rz2k9AqHU&callback=initMap"></script>
+
+  <script src="js/loadjs.min.js"></script>
+  <!-- https://github.com/w3c/IntersectionObserver/tree/master/polyfill -->
+  <script src="js/intersection-observer.min.js"></script>
+  <script src="js/map.lazy.js"></script>
+
+  <!-- Old scripts without lazy loading google Maps -->
+  <!-- <script src="js/map.js"></script> -->
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqItA_68DVvPnpN-pyXcb_F3Rz2k9AqHU&callback=initMap"></script> -->
 </body>
 
 </html>
