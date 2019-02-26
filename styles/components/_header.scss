@@ -27,9 +27,15 @@
   min-height: 56px;
   padding: 0 6%;
   list-style: none;
+
+  @media screen and (max-width: 650px) {
+    padding: 0 3%;
+  }
 }
 
 .site-navigation-item {
+  position: relative;
+  z-index: 3;
   width: 22%;
 
   a {
