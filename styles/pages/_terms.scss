@@ -1,13 +1,28 @@
 
+.breadcrumbs {
+  position: absolute;
+  top: 5px;
+
+  font-size: 15px;
+
+  .breadcrumbs-link {
+    text-decoration: underline;
+  }
+}
+
 section.terms-conditions,
-section.data-policy  {
+section.data-policy,
+section.products  {
   padding-top: 20px;
 }
 
-.terms-policy-text {
+.terms-policy-text,
+.products-text {
+  position: relative;
+  padding: 30px 55px;
+
   background-image: url(../img/bg-hex.png);
   background-image: url(../img/bg-hex.webp);
-  padding: 30px 55px;
   font-size: 18px;
   line-height: 25px;
 

@@ -3,7 +3,8 @@
   padding-top: 55px; // height of fixed header with navigation
 }
 
-.slider-terms {
+.slider-terms,
+.slider-products {
   position: relative;
   &::after{
     content: "";
@@ -66,6 +67,16 @@
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center;
+}
+
+.slider-products {
+  min-height: 350px;
+  // background-image: url(../img/code.png);
+  background-image: url(../img/products-cut.jpg);
+  background-image: url(../img/products-cut.webp);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:bottom;
 }
 
 
