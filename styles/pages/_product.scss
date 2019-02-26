@@ -49,7 +49,8 @@
 @media(max-width: 630px) {
   .products-list {
     .product-item {
-      flex-basis: 55%;
+      flex-basis: 65%;
+      margin-left: 0;
     }
   }
 }
