@@ -1,5 +1,6 @@
 .slider:not(.slider-terms) {
   position: relative;
+  // min-height: 350px;
   padding-top: 55px; // height of fixed header with navigation
 }
 
@@ -54,7 +55,7 @@
   }
 
   p {
-    font-size: 1.9em;
+    font-size: 27px;
     line-height: 38px;
     margin: 0;
   }
@@ -80,34 +81,41 @@
 }
 
 
-
-@media(max-width: 900px) {
+@media(max-width: 1000px) {
 
   .slider-content {
     .item {
-      max-width: 80%;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 36px;
-      line-height: 28px;
-      font-weight: 700;
+      max-width: 92%;
     }
 
     p {
-      font-size: 28px;
+      font-size: 24px;
       line-height: 30px;
     }
   }
 
 }
 
-@media(max-width: 720px) {
+
+@media(max-width: 900px) {
+
+  .slider-content {
+
+    h2 {
+      font-size: 36px;
+      line-height: 28px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+  }
+
+}
+
+@media(max-width: 800px) {
 
   .slider-content {
     .item {
-      max-width: 88%;
+      max-width: 93%;
     }
 
     h2 {
@@ -116,30 +124,44 @@
     }
 
     p {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 22px;
+      line-height: 27px;
     }
   }
 
 }
 
-@media(max-width: 600px) {
+@media(max-width: 720px) {
 
   .slider-content {
-    .item {
-      max-width: 90%;
-      text-align: center;
-    }
 
     h2 {
-      font-size: 2em;
-      line-height: 28px;
-      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     p {
-      font-size: 20px;
-      line-height: 23px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+}
+
+@media(max-width: 620px) {
+
+  .slider-content {
+    .item {
+      max-width: 96%;
+    }
+
+    h2 {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 
