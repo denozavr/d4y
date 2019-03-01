@@ -1,6 +1,5 @@
 .slider:not(.slider-terms) {
   position: relative;
-  // min-height: 350px;
   padding-top: 55px; // height of fixed header with navigation
 }
 
@@ -99,6 +98,19 @@
 
 @media(max-width: 900px) {
 
+  .slider {
+    min-height: 470px;
+    background-image: url('../img/main.jpg');
+    background-image: url('../img/main.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .index-hero-image {
+    display: none;
+  }
+
   .slider-content {
 
     h2 {
@@ -115,7 +127,7 @@
 
   .slider-content {
     .item {
-      max-width: 93%;
+      max-width: 90%;
     }
 
     h2 {
@@ -135,13 +147,9 @@
 
   .slider-content {
 
-    h2 {
-      margin-bottom: 8px;
-    }
-
     p {
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 
@@ -151,18 +159,18 @@
 
   .slider-content {
     .item {
-      max-width: 96%;
+      max-width: 95%;
     }
 
-    h2 {
-      font-size: 25px;
-      line-height: 30px;
-    }
+    // h2 {
+    //   font-size: 25px;
+    //   line-height: 30px;
+    // }
 
-    p {
-      font-size: 15px;
-      line-height: 18px;
-    }
+    // p {
+    //   font-size: 15px;
+    //   line-height: 18px;
+    // }
   }
 
 }
