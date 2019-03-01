@@ -3,19 +3,19 @@ var isNumberFired = false;
 
 var qualityElement = element.querySelector('#quality');
 var yearsElement = element.querySelector('#years');
-var projectsElement = element.querySelector('#projects');
+var agileElement = element.querySelector('#agile');
 
 function makeNumbersZeroes() {
   qualityElement.textContent = '0';
   yearsElement.textContent = '0';
-  projectsElement.textContent = '0';
+  agileElement.textContent = '0';
 }
 makeNumbersZeroes();
 
 function myFunction() {
-  animateValue("quality", 0, 100, 4000);
-  animateValue("years", 0, 5, 4000);
-  animateValue("projects", 0, 20, 4000);
+  animateValue('quality', 0, 100, 4000);
+  animateValue('agile', 0, 100, 4000);
+  animateValue('years', 0, 15, 4000);
 
   isNumberFired = true;
 }
