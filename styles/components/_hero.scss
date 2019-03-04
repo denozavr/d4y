@@ -98,14 +98,14 @@
 
 @media(max-width: 900px) {
 
-  .slider {
+  .slider-main {
     min-height: 470px;
-    background-image: url('../img/main.jpg');
-    background-image: url('../img/main.webp');
+    background-image: url(./img/main.jpg);
+    background-image: url(../img/main.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-  }
+   }
 
   .index-hero-image {
     display: none;
