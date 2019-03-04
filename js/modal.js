@@ -4,7 +4,7 @@ var doc = document;
 var modalGdpr = doc.querySelector('.modal-gdpr');
 var closeModal = doc.querySelector('.modal-gdpr .modal-close');
 
-setTimeout(() => {
+setTimeout(function() {
   if (modalGdpr) {
     modalGdpr.classList.remove('hidden');
 
@@ -14,5 +14,3 @@ setTimeout(() => {
 
   }
 }, 5000);
-
-
