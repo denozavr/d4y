@@ -1,0 +1,30 @@
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html, body {
+  font-family: "Arial", sans-serif;
+  height: 100%;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+.in-dev-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Vertical center alignment */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* Horizontal center alignment */
+  background-image: url(../img/bg-brick.png); }
+  .in-dev-page h1 {
+    font-size: 50px; }
