@@ -1,0 +1,11 @@
+.quote {
+  padding: 45px 5% 45px;
+
+  color: $color-white;
+  font-size: 17px;
+  text-align: center;
+
+  // !! Loaded backgrounds lazily in HTML via data-bg + JS
+  //background-image: url(../img/services-bg.jpg);
+  background-size: cover;
+}
