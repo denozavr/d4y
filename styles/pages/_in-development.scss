@@ -1,0 +1,21 @@
+.in-dev-page {
+  display: flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; /* Horizontal center alignment */
+
+  background-image: url(../img/bg-brick.png);
+
+  h1 {
+    font-size: 50px;
+  }
+
+  // !! Hack for only 1 line text to center vertically (100vh) replcaed with flexbox
+  // h1 {
+  //   height: 100vh;
+
+  //   font-size: 50px;
+  //   line-height: 100vh;
+  //   text-align: center;
+
+  // }
+}
