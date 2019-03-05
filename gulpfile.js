@@ -5,6 +5,9 @@ var gulp = require('gulp');
   cssnano = require('cssnano'),
   rename = require('gulp-rename'),
   sourcemaps = require('gulp-sourcemaps'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  order = require('gulp-order'),
   browserSync = require("browser-sync").create();
 
 
@@ -15,10 +18,36 @@ var paths = {
     // Compiled files in specified folder
     finalFile: 'styles/styles.css',
     destDev: 'styles',
-    dest: 'dist'
+    dest: 'dist',
+    root: './'
+  },
+  js: {
+    src: 'js/*.js',
+    finalFile: 'js/scripts.js',
+    destDev: 'js/all',
+    root: './'
   }
-
 };
+
+function scripts() {
+  return gulp.src(paths.js.src)
+      .pipe(order([
+        'js/lazysizes.min.js',
+        'js/modal.js',
+        'js/numbers.js',
+        'js/loadjs.min.js',
+        'js/intersection-observer.min.js',
+        'js/map.lazy.js',
+        'js/sendEmail.js',
+        'js/emailjs.min.js',
+        'js/sweetalert2.all.min.js'
+      ], { base: __dirname }))
+      .pipe(concat('scripts.js'))
+      .pipe(gulp.dest(paths.js.destDev)) // moved concat. file to js/all because if in the same folder on every new task execution the all js files appened in script.js
+      .pipe(rename('scripts.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest(paths.js.root));
+}
 
 // Define tasks after requiring dependencies
 function style() {
@@ -43,17 +72,17 @@ function styleMin() {
     .src(paths.styles.finalFile)
     .pipe(postcss([cssnano()]))
     .pipe(rename('styles.min.css'))
-    .pipe(gulp.dest(paths.styles.dest));
+    .pipe(gulp.dest(paths.styles.root));
 }
 
-	
+
 // A simple task to reload the page when HTML was changed
 function reload() {
   browserSync.reload();
 }
 
 function watch() {
-  // // run style task before implement gulp.watch
+  // run style task before implement gulp.watch
   // style();
   // styleMin();
 
@@ -74,14 +103,19 @@ function watch() {
   gulp.watch(paths.styles.src, style);
   gulp.watch(paths.styles.finalFile, styleMin);
 
+  gulp.watch(paths.js.src, scripts);
+
   // gulp.watch("./*.html", reload);
 }
 
 // Don't forget to expose the task!
-exports.watch = watch
+exports.watch = watch;
 
 // Expose the task by exporting it
 // This allows you to run it from the commandline using
 // $ gulp style
 exports.style = style;
 exports.min = styleMin;
+
+//JS
+exports.scripts = scripts;
