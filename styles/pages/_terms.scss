@@ -21,8 +21,9 @@ section.products  {
   position: relative;
   padding: 30px 55px;
 
-  background-image: url(../img/bg-hex.png);
-  background-image: url(../img/bg-hex.webp);
+  // ! Replaced with lazy loaded background
+  // background-image: url(../img/bg-hex.png);
+  // background-image: url(../img/bg-hex.webp);
   font-size: 18px;
   line-height: 25px;
 

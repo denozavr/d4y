@@ -33,6 +33,10 @@
   }
 }
 
+_:-ms-lang(x), .site-navigation-item {
+  margin: 15px 0;
+}
+
 .site-navigation-item {
   position: relative;
   z-index: 3;

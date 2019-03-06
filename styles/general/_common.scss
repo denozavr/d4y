@@ -14,8 +14,9 @@ body {
 
 .container-bg {
   background-color: $color-white;
-  background-image: url('../img/bg-hex.png');
-  background-image: url(../img/bg-hex.webp);
+  // ! Replaced with lazy loaded background
+  // background-image: url('../img/bg-hex.png');
+  // background-image: url(../img/bg-hex.webp);
 }
 
 div.container:not(.full-width) {

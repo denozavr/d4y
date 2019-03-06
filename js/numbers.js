@@ -5,12 +5,16 @@ var qualityElement = element.querySelector('#quality');
 var yearsElement = element.querySelector('#years');
 var agileElement = element.querySelector('#agile');
 
+// var isIE11 = /Trident.*rv[ :]*11\./.test(navigator.userAgent);
+var isIE = window.navigator.userAgent.match(/(MSIE|Trident)/);
+
 function makeNumbersZeroes() {
   qualityElement.textContent = '0';
   yearsElement.textContent = '0';
   agileElement.textContent = '0';
 }
-makeNumbersZeroes();
+
+if(!isIE) { makeNumbersZeroes(); }
 
 function myFunction() {
   animateValue('quality', 0, 100, 4000);
