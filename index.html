@@ -40,14 +40,14 @@
           <ul class="site-navigation-list">
             <li class="site-navigation-item"><a href="#services-section">Services</a></li>
             <li class="site-navigation-item"><a href="in-development.html">Produkte</a></li>
-            <li class="site-navigation-item"><a href="#contact-section">Kontakt</a></li>
             <li class="site-navigation-item"><a href="#about-section">Über uns</a></li>
+            <li class="site-navigation-item"><a href="#contact-section">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="container container-bg">
+    <main class="container container-bg lazyload" data-bg="img/bg-hex.png">
       <section class="slider slider-main lazyload" data-bg="img/main.jpg">
         <h1 class="visually-hidden">Dev4you Heldenbild</h1>
         <picture class="block index-hero-image">
@@ -78,15 +78,14 @@
         <h2 class="visually-hidden">Unsere Grundsteine</h2>
         <ul class="advantages-list">
           <li class="advantages-item">
-            <h3>Responsive Design</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere mollitia itaque numquam blanditiis,
-              officiis magnam.</p>
-          </li>
+            <h3>Beratung und Projektmanagement</h3>
+            <p>Kein Projekt ist wie die andere. Die Prozesse, Methoden, Vorgehen und Maßnahmen stimmen wir mit Ihnen gemeinsam auf Ihr Umfeld und Ihre Projektsituation ab.
 
+            Wir arbeiten interdisziplinär, vorausschauend und zielführend, um ein perfektes Ergebnis mit Ihnen zu erreichen.</p>
+          </li>
           <li class="advantages-item">
-            <h3>Clean & Powerful Code</h3>
-            <p>Remlo ipsum dolor sit, amet consectetur adipisicing elit. Unde enim, temporibus id fugit doloremque
-              odio.</p>
+            <h3>Softwareentwicklung</h3>
+            <p>Der agile Ansatz ermöglicht uns einen flexiblen Software-Entwicklungsprozess. Mehr Transparenz, regelmäßige Überprüfung und kontinuierliche Anpassungen führen zu hochwertigerem Ergebnis. Wir unterstützen Sie in allen Phasen der Softwareentwicklung: von Spezifikation bis zu Dokumentation und Betrieb.</p>
           </li>
           <li class="advantages-item">
             <h3>Dedizierten Support</h3>
@@ -207,9 +206,7 @@
           </li>
           <li class="howwork-item lazyload" data-bg="img/work-4.jpg">
             <h3>User Testing</h3>
-            <p>Testkriterien werden klar definiert, Testzyklen werden wiederholt durchgeführt und die Testergebnisse werden klar validiert. Das ist ein fester Bestandteil unseres Qualitätssicherungskonzeptes.
-
-            Kostenreduktion bei der Einführung von Test-Automatisierung durch Erstellung und regelmäßige Aktualisierung der Skripte. Hier bitte nochmal eine kurze Erklärung.</p>
+            <p>Testkriterien werden klar definiert, Testzyklen werden wiederholt durchgeführt und die Testergebnisse werden klar validiert. Das ist ein fester Bestandteil unseres Qualitätssicherungskonzeptes. Nicht nur für die neue Entwicklung - durch die Verwendung von automatischen Unit-Tests testen wir die bestehenden Funktionen effizient mit.</p>
           </li>
         </ul>
       </section>
@@ -221,7 +218,7 @@
           <div class="about-us">
             <h3>Über uns</h3>
             <p class="about-text">
-              <strong><a href="dev4you_agile_entwicklung_profil.pdf" target="_blank">Dev4you GmbH</a></strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi cumque ipsam optio molestiae provident pariatur nobis! Libero veniam aperiam, similique blanditiis tempora provident? Enim dolor accusamus a deserunt maiores repellendus ut aut adipisci cumque culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <strong><a href="dev4you_agile_entwicklung_profil.pdf" target="_blank">Dev4you GmbH</a></strong> ist ein dynamisches und schnell wachsendes Unternehmen im Bereich IT-Consulting und Softwareentwicklung mit Sitz in Wuppertal-Elberfeld.
             </p>
 
           </div>
@@ -261,8 +258,8 @@
       </section> -->
 
       <section id="contact-section" class="contact-us">
-        <h2>Kontaktieren uns</h2>
-        <p>Hier können Sie uns einen Brief schicken, in dem Sie ein Angebot oder Informationen anfordern, die Sie interessieren.</p>
+        <h2>Kontaktieren Sie Uns</h2>
+        <p class="contact-slogan">Wir freuen uns, von Ihnen zu hören! Füllen Sie einfach das Kontaktformular aus und wir werden Ihnen so schnell wie möglich antworten.</p>
         <form class="contact-form">
           <label class="visually-hidden" for="contact-name">Name</label>
           <input class="input-half-width" type="text" name="contact-name" id="contact-name" placeholder="Name" aria-label="Name eingeben" required>
@@ -276,7 +273,8 @@
           <label class="policy-checkbox">
             <input class="visually-hidden policy-checkbox-input" type="checkbox" name="accept-policy" id="contact-accept-policy" required>
             <span class="checkbox-indicator"></span>
-            <span class="policy-checkbox-text"><a href="terms-policy.html#policy-section">Datenschutzrichtlinien</a> akzeptieren</span>
+            <span class="policy-checkbox-text">
+                Ich stimme <a href="terms-policy.html#policy-section">Datenschutzrichtlinie</a> zu</span>
           </label>
 
           <button class="contact-button" type="submit" name="send-value" id="send-value">Nachricht senden</button>
@@ -319,7 +317,8 @@
           </div>
           <div class="footer-contact">
             <p class="contact-data">
-              <span class="contact-item">dev4you GmbH</span>
+              <span class="contact-item"><strong>dev4you GmbH</strong></span>
+              <span class="contact-item">(codeks)</span>
               <span class="contact-item">Moritzstraße 14</span>
               <span class="contact-item">Wuppertal, 42117, DE </span>
               <span class="contact-item"><span class="visually-hidden">Phone:</span><a href="tel:+49202947921201">+49 202 947921201</a> </span>
@@ -351,9 +350,8 @@
 
     <section class="modal modal-gdpr hidden">
         <h2 class="visually-hidden">GDPR modal</h2>
-        <p> By continuing to use this website, you accept the dev4you GmbH <a class="gdpr-link" href="terms-policy.html#terms-section">Terms and Conditions</a>.
-          Please have a look at our <a class="gdpr-link" href="terms-policy.html#policy-section">Data Protection Policy</a>
-          for more information on how we process your data collected on this website.&nbsp;
+        <p class="modal-text">Wir verwenden Cookies, um Ihnen das bestmögliche Nutzungserlebnis zu bieten. Durch die Nutzung dieser Webseite akzeptieren Sie dev4you GmbH <a class="gdpr-link" href="terms-policy.html#terms-section">Terms and Conditions</a>.
+        <a class="gdpr-link" href="terms-policy.html#policy-section">Weitere Informationen</a>.&nbsp;
           <button class="modal-close" type="button">x</button>
         </p>
 
