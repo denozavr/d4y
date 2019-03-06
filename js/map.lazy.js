@@ -11,8 +11,9 @@ function google_maps_init() {
 
   var contentString = '<div id="content" class="map-popup">' +
     '<h2 id="firstHeading" class="popup-header">dev4you GmbH</h2>' +
-    '<div id="bodyContent">' +
-    '<p class="popup-text">Moritzstraße 14 <br>' +
+    '<div id="bodyContent">(codeks)' +
+    '<p class="popup-text">' +
+    'Moritzstraße 14 <br>' +
     ' 42117 Wuppertal <br>' +
     'Germany <br>' +
     '<a href="https://www.google.com/maps/place/Moritzstra%C3%9Fe+14,+42117+Wuppertal,+Germany/@51.2510058,7.1288998,17z/data=!3m1!4b1!4m5!3m4!1s0x47b8d655dd6db85b:0x1f57da223bbff299!8m2!3d51.2510025!4d7.1310885" target="_blank">' +

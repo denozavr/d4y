@@ -9,6 +9,10 @@
   color: $color-white;
 
   background-color:  transparentize($color-black, 0.4);
+
+  .modal-text {
+    margin: 5px 0 0 0;
+  }
 }
 
 .modal-gdpr {
