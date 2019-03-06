@@ -11,9 +11,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var sendButton = document.querySelector('#send-value');
 
-  sendButton.addEventListener('click', sendMessage)
+  sendButton.addEventListener('click', sendMessage);
 
-  function sendMessage() {
+  nameInput.addEventListener('blur', addTouchedInput);
+  emailInput.addEventListener('blur', addTouchedInput);
+  messageInput.addEventListener('blur', addTouchedInput);
+  policyCheckboxInput.addEventListener('blur', addTouchedInput);
+
+  var invalidInputs = [];
+
+  function addTouchedInput() {
+    this.classList.add('touched');
+    this.removeEventListener('blur',addTouchedInput);
+  }
+
+  function addTouchedAll(arr) {
+    arr.forEach(function (element) {
+      element.classList.add('touched');
+    });
+  }
+
+  function sendMessage(e) {
+    e.preventDefault();
+
+    addTouchedAll([nameInput, emailInput, messageInput, policyCheckboxInput]);
 
     var enableSubmit = function () {
       sendButton.disabled = false; //("disabled");
@@ -59,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function isValid(input) {
-    let isValid = input.value.trim().length > 0;
+    var isValid = input.value.trim().length > 0;
     return isValid;
   }
 
