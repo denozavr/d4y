@@ -33,6 +33,13 @@
     border: 2px solid fade-out($logo-color-blue, 1); // rgba(1, 62, 123, 0.8);
   }
 
+  input.touched:invalid,
+  textarea.touched:invalid,
+  .policy-checkbox-input.touched:not(:checked) + span.checkbox-indicator {
+    background-color: fade-out( $invalid-color, .85);
+    border: 2px solid $invalid-color;
+  }
+
   .input-half-width {
     width: 48%;
   }
@@ -41,14 +48,14 @@
     width: 100%;
   }
 
-  .contact-button,
-  .policy-checkbox {
+  .contact-button {
     width: 38%;
   }
 
   .policy-checkbox {
     position: relative;
     padding: 10px 0;
+    width: 45.5%;
 
 
     .policy-checkbox-input {
@@ -122,7 +129,8 @@
 
     .contact-button,
     .policy-checkbox {
-      width: 65%;
+      width: 55%;
+      min-width: 290px;
       margin: 5px auto;
     }
 
