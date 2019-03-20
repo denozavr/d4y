@@ -71,7 +71,7 @@ _:-ms-lang(x), .site-navigation-item {
   top: 0;
   position: absolute;
   z-index: 11;
-  width: 100%;
+  // width: 100%; // Fix bug in Edge and IE 11
   left: 50%;
   transform: translateX(-50%);
   color: white;
