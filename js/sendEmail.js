@@ -13,10 +13,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   sendButton.addEventListener('click', sendMessage);
 
-  nameInput.addEventListener('blur', addTouchedInput);
-  emailInput.addEventListener('blur', addTouchedInput);
-  messageInput.addEventListener('blur', addTouchedInput);
-  policyCheckboxInput.addEventListener('blur', addTouchedInput);
+  function addBlurListenersForFormInputs() {
+    nameInput.addEventListener('blur', addTouchedInput);
+    emailInput.addEventListener('blur', addTouchedInput);
+    messageInput.addEventListener('blur', addTouchedInput);
+    policyCheckboxInput.addEventListener('blur', addTouchedInput);
+  }
+
+  addBlurListenersForFormInputs();
+
 
   var invalidInputs = [];
 
@@ -25,16 +30,22 @@ document.addEventListener('DOMContentLoaded', function () {
     this.removeEventListener('blur',addTouchedInput);
   }
 
-  function addTouchedAll(arr) {
+  function addClass(arr, cssClass) {
     arr.forEach(function (element) {
-      element.classList.add('touched');
+      element.classList.add(cssClass);
+    });
+  }
+
+  function removeClass(arr, cssClass) {
+    arr.forEach(function (element) {
+      element.classList.remove(cssClass);
     });
   }
 
   function sendMessage(e) {
     e.preventDefault();
 
-    addTouchedAll([nameInput, emailInput, messageInput, policyCheckboxInput]);
+    addClass([nameInput, emailInput, messageInput, policyCheckboxInput],'touched');
 
     var enableSubmit = function () {
       sendButton.disabled = false; //("disabled");
@@ -68,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
             messageInput.value = '';
             policyCheckboxInput.checked = false;
             Swal.fire("Thank you!", "Your message was successfully sent. We will answer you within 24 hours! If you want send another message please wait 60 seconds.", "success");
+
+            removeClass([nameInput, emailInput, messageInput, policyCheckboxInput],'touched');
+            addBlurListenersForFormInputs();
           },
           function (error) {
             console.log("FAILED", error);
