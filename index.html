@@ -261,7 +261,7 @@
           <label class="visually-hidden" for="contact-name">Name</label>
           <input class="input-half-width" type="text" name="contact-name" id="contact-name" placeholder="Name" aria-label="Name eingeben" required>
           <label class="visually-hidden" for="contact-email">Email</label>
-          <input class="input-half-width" type="email" name="contact-email" id="contact-email" placeholder="Email" aria-label="Email eingeben" required>
+          <input class="input-half-width" type="email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"  name="contact-email" id="contact-email" placeholder="Email" aria-label="Email eingeben" required>
           <label class="visually-hidden" for="contact-subject">Letter Subject</label>
           <input class="input-full-widht" type="text" name="contact-subject" id="contact-subject" placeholder="Betreff" aria-label="Nachricht Betreff eingeben">
           <label class="visually-hidden" for="contact-message">Nachricht</label>
