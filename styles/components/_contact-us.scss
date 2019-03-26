@@ -45,6 +45,13 @@
     border: 2px solid $invalid-color;
   }
 
+  //reset autofill styles
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px fade-out($logo-color-light-blue, .75) inset;
+    -webkit-text-fill-color: $color-black;
+  }
+
+
   .input-half-width {
     width: 48%;
   }
