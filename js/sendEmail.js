@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     addClass([nameInput, emailInput, messageInput, policyCheckboxInput],'touched');
 
-    var enableSubmit = function () {
+    function enableSubmit() {
       sendButton.disabled = false; //("disabled");
     }
 
@@ -59,9 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // enable send button after 60 seconds
-    setTimeout(function () {
-      enableSubmit()
-    }, 60000);
+    setTimeout(enableSubmit, 60000);
 
     if (validForm) {
       letter.send("gmail9129", "template_n5ExgOcP", {
