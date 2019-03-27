@@ -127,6 +127,16 @@
     border-radius: 15px;
   }
 
+  .contact-button:disabled,
+  .contact-button[disabled] {
+    opacity:0.35;
+    // background-color: lighten($logo-color-light-blue, 20);
+    // color: lighten($color-black, 30);
+
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
 }
 
 // Mobiles styles
